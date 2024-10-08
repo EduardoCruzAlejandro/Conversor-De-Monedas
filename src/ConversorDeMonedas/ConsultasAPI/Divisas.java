@@ -1,0 +1,7 @@
+package ConversorDeMonedas.ConsultasAPI;
+
+import java.util.Map;
+
+public record Divisas(String base_code,
+                      Map<String, Double> conversion_rates) {
+}
