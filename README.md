@@ -28,4 +28,24 @@ El proyecto está compuesto por las siguientes clases principales:
    ```bash
    git clone https://github.com/EduardoCruzAlejandro/Conversor-De-Monedas.git
 
+2. Navega al directorio del proyecto:
+   ```bash
+   cd conversor-divisas
+
+3. Compila el proyecto:
+   ```bash
+   javac -cp .:gson-2.8.8.jar Principal.java ConsultaDivisa.java Divisas.java Calculos.java Registro.java Menu.java
+
+4. Ejecuta la aplicacion:
+   ```bash
+   java -cp .:gson-2.8.8.jar Principal
+
+
+##USO
+1. Al ejecutar la aplicación, se presentará un menú para seleccionar la moneda base.
+2. Luego, se le pedirá que seleccione la moneda de destino y la cantidad que desea convertir.
+3. Los resultados de la conversión se mostrarán en la consola, junto con un historial de conversiones realizadas.
+
+##Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor, abre un issue o envía un pull request.
 
