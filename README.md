@@ -41,7 +41,7 @@ El proyecto está compuesto por las siguientes clases principales:
    java -cp .:gson-2.8.8.jar Principal
 
 
-##USO
+## USO
 1. Al ejecutar la aplicación, se presentará un menú para seleccionar la moneda base.
 2. Luego, se le pedirá que seleccione la moneda de destino y la cantidad que desea convertir.
 3. Los resultados de la conversión se mostrarán en la consola, junto con un historial de conversiones realizadas.
