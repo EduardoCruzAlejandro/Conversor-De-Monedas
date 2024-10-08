@@ -46,6 +46,6 @@ El proyecto está compuesto por las siguientes clases principales:
 2. Luego, se le pedirá que seleccione la moneda de destino y la cantidad que desea convertir.
 3. Los resultados de la conversión se mostrarán en la consola, junto con un historial de conversiones realizadas.
 
-##Contribuciones
+## Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor, abre un issue o envía un pull request.
 
