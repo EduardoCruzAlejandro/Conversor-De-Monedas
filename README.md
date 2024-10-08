@@ -26,5 +26,6 @@ El proyecto está compuesto por las siguientes clases principales:
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/conversor-divisas.git
+   git clone https://github.com/EduardoCruzAlejandro/Conversor-De-Monedas.git
+
 
