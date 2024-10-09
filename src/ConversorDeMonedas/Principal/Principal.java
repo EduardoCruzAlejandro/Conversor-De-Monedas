@@ -3,6 +3,7 @@ package ConversorDeMonedas.Principal;
 import ConversorDeMonedas.Calculos.Calculos;
 import ConversorDeMonedas.ConsultasAPI.ConsultaDivisa;
 import ConversorDeMonedas.ConsultasAPI.Divisas;
+import ConversorDeMonedas.Tiempo.Historial;
 import ConversorDeMonedas.Tiempo.Registro;
 
 import java.io.IOException;
@@ -17,14 +18,15 @@ public class Principal {
         ConsultaDivisa consulta = new ConsultaDivisa();
         Registro registro = new Registro();
         Calculos calculos = new Calculos();
+        Historial guardar = new Historial();
         while (true){
 
                 double cantidad;
                 //Llama al Menu para solicitar la moneda base
-                String moneda = Menu.menuBase();
+                String moneda = Menu.menuBase().toUpperCase();
                 if (moneda.equals("salir")) break;
                 //Llama de nuevo para solicitar la otro moneda a convertir
-                String cambio = Menu.menuCambio();
+                String cambio = Menu.menuCambio().toUpperCase();
                 if (cambio.equals("salir")) break;
 
                 //Pide la cantidad a convertir
@@ -52,6 +54,8 @@ public class Principal {
                 int respuesta = busqueda.nextInt();
                 if (respuesta==2) {
                     //Imprime el historial y sale
+
+                    guardar.guardarHistorial(historial);
                     for (String registroItem : historial){
                         System.out.println("Historial de Conversiones: "+ registroItem);
                     }
