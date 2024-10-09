@@ -2,10 +2,18 @@ package ConversorDeMonedas.Principal;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Clase Menu que permite al usuario seleccionar las monedas base y de destino
+ * para realizar una conversión. Proporciona opciones predeterminadas y permite
+ * ingresar el código de una divisa personalizada.
+ */
 public class Menu {
     static Scanner busqueda = new Scanner(System.in);
-
+    /**
+     * Muestra el menú para seleccionar la moneda base y captura la elección del usuario.
+     *
+     * @return Un código de divisa (ej. "MXN", "USD", "EUR") o "salir" para finalizar.
+     */
     public static String menuBase(){
         ArrayList<String> opciones = new ArrayList<>();
         opciones.add("Peso Mexicano (MXN)");
@@ -30,7 +38,11 @@ public class Menu {
                 return menuBase();
         }
     }
-
+    /**
+     * Muestra el menú para seleccionar la moneda de destino y captura la elección del usuario.
+     *
+     * @return Un código de divisa (ej. "MXN", "USD", "EUR") o "salir" para finalizar.
+     */
     public static String menuCambio(){
         ArrayList<String> opciones = new ArrayList<>();
         opciones.add("Peso Mexicano (MXN)");
@@ -54,7 +66,11 @@ public class Menu {
                 return menuCambio();
         }
     }
-    //Metodo para mostrar el menus de usuarios;
+    /**
+     * Método auxiliar que muestra una lista de opciones para que el usuario seleccione.
+     *
+     * @param opciones Lista de opciones de divisas a mostrar.
+     */
     private static void menu(ArrayList<String> opciones) {
         for (int i = 0; i < opciones.size(); i++) {
             System.out.println((i + 1) + ". " + opciones.get(i));

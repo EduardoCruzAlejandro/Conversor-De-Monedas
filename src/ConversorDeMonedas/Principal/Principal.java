@@ -10,8 +10,15 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Clase Principal que representa el punto de entrada de la aplicación de conversión de divisas.
+ * Esta clase utiliza otras clases auxiliares para realizar consultas de tasas de cambio,
+ * llevar un registro de las conversiones y efectuar los cálculos necesarios.
+ * La aplicación se ejecuta en un bucle que permite al usuario realizar múltiples conversiones
+ * hasta que elija salir.
+ */
 public class Principal {
+    //Metodo principal
     public static void main(String[] args) {
         //Inicia las instancias
         Scanner busqueda = new Scanner(System.in);
@@ -19,6 +26,7 @@ public class Principal {
         Registro registro = new Registro();
         Calculos calculos = new Calculos();
         Historial guardar = new Historial();
+
         while (true){
 
                 double cantidad;
@@ -53,8 +61,7 @@ public class Principal {
                 System.out.println("1= Si, 2=No");
                 int respuesta = busqueda.nextInt();
                 if (respuesta==2) {
-                    //Imprime el historial y sale
-
+                    //Imprime el historial, genera un archivo json y sale del programa
                     guardar.guardarHistorial(historial);
                     for (String registroItem : historial){
                         System.out.println("Historial de Conversiones: "+ registroItem);
